@@ -18,3 +18,19 @@ function compose(funcArr){
 }
 const formulaWithCompose 
      = compose([multiplyTwo, multiplyThree, addFour]);
+
+
+
+function compose2(){
+    const funcArr = Array.prototype.slice.call(arguments);
+    return funcArr.reduce(
+        function(prevFunc, nextFunc){
+            return function(value){
+                return nextFunc(prevFunc(value));
+            }
+        },
+        function(k){return k}
+    );
+}
+const formulaWithCompose2 
+     = compose2(multiplyTwo, multiplyThree, addFour);
