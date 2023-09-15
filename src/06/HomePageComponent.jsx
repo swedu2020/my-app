@@ -2,9 +2,9 @@ import React, {PureComponent} from "react";
 import PropTypes from 'prop-types';
 import Button from '../04/Button';
 import ButtonWithContext from './ButtonWithContext';
-
+import ButtonWithLoadingContext from './ButtonWithLoadingContext';
 function RowBComponent(){
-    return <Button>버튼</Button>;
+    return <ButtonWithLoadingContext label='hello'>버튼</ButtonWithLoadingContext>;
 }
 function RowCComponent(){
     return <ButtonWithContext>버튼</ButtonWithContext>;
