@@ -4,7 +4,7 @@ import Button from '../04/Button';
 import ButtonWithContext from './ButtonWithContext';
 import ButtonWithLoadingContext from './ButtonWithLoadingContext';
 function RowBComponent(){
-    return <ButtonWithLoadingContext label='hello'>버튼</ButtonWithLoadingContext>;
+    return <ButtonWithLoadingContext label='hello2'>버튼</ButtonWithLoadingContext>;
 }
 function RowCComponent(){
     return <ButtonWithContext>버튼</ButtonWithContext>;
