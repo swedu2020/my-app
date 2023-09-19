@@ -5,6 +5,7 @@ import { setCollection } from './actions/collectionActions01';
 import { setAge } from './actions/collectionActions02';
 import ContainerComponent from './containers/ContainerComponent';
 import PresentationComponent from './PresentationComponent';
+import DispatchContainer from './containers/DispatchContainer03';
 
 class AdvReduxApp extends PureComponent {
   store = configureStore({ loading: false, user:{name:'Kim'} });
@@ -18,6 +19,7 @@ class AdvReduxApp extends PureComponent {
     );
     this.store.dispatch(setAge(2, 55));
     const { collection } = this.store.getState();
+    console.log(collection);
     const { ids, entities } = collection;
     const originalPayload = ids.map(id => entities[id]);
     console.log(originalPayload);
@@ -30,7 +32,9 @@ class AdvReduxApp extends PureComponent {
         <br/>
         <PresentationComponent userName="화면 컴포넌트" />
         <br />
-        <ContainerComponent id={1} />
+        <ContainerComponent id={2} />
+        <br/>
+        <DispatchContainer />
       </Provider>
     );
   }

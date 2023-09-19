@@ -2,9 +2,12 @@ import { connect } from 'react-redux';
 import PresentationComponent from '../PresentationComponent';
 
 const mapStateToProps = (state, props) => {
+    console.log('mapStateToProps....');
+    console.log(state);
     return {
-    userName: state.user.name,
-    entity: state.collection.entities[props.id],
+        loading: state.loading,
+        userName: state.user.name,
+        entity: state.collection.entities[props.id],
     };
 };
 
