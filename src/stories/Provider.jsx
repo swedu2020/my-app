@@ -5,7 +5,9 @@ import ButtonWithNewConsumer from '../06/ButtonWithNewConsumer';
 export const Provider = ({name}) => {
     return(
         <LoadingProvider>
-            <ButtonWithNewConsumer children={name}/>
+            <div>
+                <ButtonWithNewConsumer children={name}/>
+            </div>
         </LoadingProvider>
     );  
 };
