@@ -8,6 +8,7 @@ import PresentationComponent from './PresentationComponent';
 import DispatchContainer from './containers/DispatchContainer03';
 import SearchFilterInputContainer from './containers/SearchFilterInputContainer';
 import SearchResetButtonContainer from './containers/SearchResetButtonContainer';
+import SearchResultTableContainer from './containers/SearchResultTableContainer';
 
 class SearchFilterReduxApp extends PureComponent {
   store = configureStore({ loading: false, user:{name:'Kim'} });
@@ -36,6 +37,7 @@ class SearchFilterReduxApp extends PureComponent {
             <SearchFilterInputContainer type="number" name="age" label="나이검색"/>
             <SearchResetButtonContainer>리셋</SearchResetButtonContainer>
         </fieldset>
+        <SearchResultTableContainer />
         <br/>
         <PresentationComponent userName="화면 컴포넌트" />
         <br />
