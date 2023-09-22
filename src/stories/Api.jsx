@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HooksApp from '../vlpt/App';
-export const Hooks = () => {
+import ApiApp from '../vlpt/Users';
+export const Api = () => {
     return(
         <React.Fragment>
-            <HooksApp />
+            <ApiApp />
         </React.Fragment>
     );  
 };
-Hooks.propTypes = {
+Api.propTypes = {
 
 };
-Hooks.defaultProps = {
+Api.defaultProps = {
 
 }
