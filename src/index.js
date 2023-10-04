@@ -6,14 +6,11 @@ import ListExample from './ListExample';
 import ScrollSpy from './ScrollSpy';
 import Counter3 from './Counter3';
 import Input from './Input';
-
+import App from './FormTest';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Input name='id' label='ID : '
-      onChange={(len)=>((len >= 5) ? true : false)}  /><br></br>
-    <Input name='pw' label='PW : ' type='password'/><br></br>
-    <Input name='eamil' label='EMAIL : ' type='email'/><br></br>
+    <App />
   </React.StrictMode>
 );
 
