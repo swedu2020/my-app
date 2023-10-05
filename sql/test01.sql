@@ -137,4 +137,16 @@ select c.cid, c.cname, o.oid, o.odate, o.price
  from customer c inner join _order o on c.cid=o.cid
  where c.cid='C0001';
 
+-- 연관 서브쿼리
+select c.cname, (select count(1) from _order o where o.cid=c.cid)
+   as '주문횟수' from customer c;
+-- 비연관 서브쿼리
+select cid, cname from customer
+ where cid not in (select distinct cid from _order);
+
+-- union select (컬럼의 개수가 동일해야한다.)
+select *, 1, 2, 3, 4, 5, 6 from customer
+union
+select * from _order;
+
 
