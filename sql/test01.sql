@@ -52,7 +52,26 @@ select * from information_schema.table_constraints where table_name='member';
 
 insert into member(id, pw, name, email, tel, age)
  values('kim', sha1('kimpw'), 'kim00', 'kim@naver.com', '010-1111-2222', 20);
-select * from member;
+select * from member where id='kim' and pw=sha1('kimpw');
 
+insert into member(id, pw, name, email, tel, age) values('lee', 
+  sha1('leepw'), 'lee00', 'lee@naver.com', '010-1111-3333', 10); -- error
+ 
 -- 2. 학생성적 테이블 score(sno, kor, eng, math)
-
+drop table score;
+create table score(
+	sno char(10) primary key,
+    kor tinyint default 0,
+    eng tinyint default 0,
+    math tinyint default 0,
+    constraint kor_limit check(kor>=0 and kor<=100),
+    constraint eng_limit check(eng>=0 and eng<=100),
+    constraint math_limit check(math>=0 and math<=100)
+);
+desc score;
+select * from information_schema.table_constraints where table_name='score';
+insert into score(sno, kor, eng, math) values('2023010203', 100, 90, 80);
+insert into score(sno, kor, eng, math) values('2023010201', 111, 22, 33); -- error
+insert into score(sno, kor, eng, math) values('2023010201', -111, 22, 33); -- error
+insert into score(sno, kor, eng, math) values('2023010201', 11, 22, 33);
+select * from score;
