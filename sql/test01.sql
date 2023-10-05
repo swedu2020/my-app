@@ -127,3 +127,14 @@ INSERT INTO _order (oid, cid, odate, price, address, ddate, money, dmoney, spoin
  ('O1010', 'C0003', '2021-12-31', 9000, '원주시', '2021-12-31', 9000, 0, 90);
 select * from customer;
 select * from _order;
+select customer.*, _order.* from customer, _order;
+
+-- 조인의 첫번째 방법
+select c.cid, c.cname, o.oid, o.odate, o.price 
+ from customer c, _order o where c.cid=o.cid and c.cid='C0001';
+-- 조인의 두번째 방법
+select c.cid, c.cname, o.oid, o.odate, o.price 
+ from customer c inner join _order o on c.cid=o.cid
+ where c.cid='C0001';
+
+
