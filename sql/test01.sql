@@ -21,8 +21,8 @@ create table tb01(
     pass tinyint default 0,
     primary key(num)
 );
-desc tb01;
-select * from tb01;
+desc tb01;  -- 테이블 구조 확인
+select * from tb01;  -- 테이블 내용 확인 
 
 -- insert into 테이블명(컬럼리스트) values(데이터리스트);
 -- insert into 테이블명 values(데이터리스트);
@@ -47,6 +47,9 @@ create table member(
     tel varchar(20),
     age tinyint constraint age_limit check(age>15)
 );
+desc member;
+select * from information_schema.table_constraints where table_name='member';
+
 insert into member(id, pw, name, email, tel, age)
  values('kim', sha1('kimpw'), 'kim00', 'kim@naver.com', '010-1111-2222', 20);
 select * from member;
