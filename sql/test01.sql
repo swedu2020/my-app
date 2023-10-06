@@ -149,4 +149,18 @@ select *, 1, 2, 3, 4, 5, 6 from customer
 union
 select * from _order;
 
+-- 컬럼의 key 정보 조회
+select * from information_schema.key_column_usage where table_schema='testdb';
+-- index 정보 조회
+select * from information_schema.statistics where table_schema='testdb';
+-- view 정보 조회
+select * from information_schema.views where table_schema='testdb';
 
+-- customer 테이블의 cname에 index 추가
+create index index_customer_cname on customer(cname);
+
+-- view 만들기
+create view custom_order_count as
+  select c.cname as '고객명', (select count(1) from _order o where o.cid=c.cid)
+   as '주문횟수' from customer c;
+select * from custom_order_count;
