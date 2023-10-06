@@ -174,4 +174,5 @@ desc customer;
 
 update customer set cname='kim', cpass='' where cid='C0002';
 select * from customer;
+delete from customer where cid='C0005';
 
