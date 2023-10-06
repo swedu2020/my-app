@@ -164,3 +164,14 @@ create view custom_order_count as
   select c.cname as '고객명', (select count(1) from _order o where o.cid=c.cid)
    as '주문횟수' from customer c;
 select * from custom_order_count;
+
+
+alter table customer add email varchar(255);
+alter table customer change email email2 varchar(50);
+alter table customer drop column email2;
+select * from customer;
+desc customer;
+
+update customer set cname='kim', cpass='' where cid='C0002';
+select * from customer;
+
