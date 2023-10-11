@@ -3,22 +3,22 @@ use testdb;
 
 -- Creating DEPT table.
 CREATE TABLE dept(
-    deptno INT,
-    dname VARCHAR(14),
-    loc VARCHAR(13),
+    deptno INT,  -- 부서번호
+    dname VARCHAR(14),  -- 부서명
+    loc VARCHAR(13),  -- 지역
        constraint pk_dept primary key (deptno)
 );
 
 -- Creating EMP table.
 CREATE TABLE emp(
-    empno INT,
-    ename VARCHAR(10),
-    job VARCHAR(9),
-    mgr INT,
-    hiredate DATE,
-    sal DECIMAL(7,2),
-    comm DECIMAL(7,2),
-    deptno INT,
+    empno INT,  -- 사원번호(사번)
+    ename VARCHAR(10),  -- 사원이름
+    job VARCHAR(9),  -- 직업
+    mgr INT,  -- 상사의 사원번호
+    hiredate DATE,  -- 입사일
+    sal DECIMAL(7,2),  -- 급여
+    comm DECIMAL(7,2),  -- 모름(무시)
+    deptno INT,  -- 부서번호(외래키)
    constraint pk_emp primary key (empno),
    constraint fk_deptno foreign key (deptno) references dept (deptno)
 );
