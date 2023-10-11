@@ -49,3 +49,13 @@ INSERT INTO emp VALUES
 
 select * from dept;
 select * from emp;
+
+-- 1. emp 테이블을 직업(오름차순), 입사일(오름차순)순으로 정렬하기
+select * from emp order by job, hiredate;
+
+-- 2. 부서가 sales인 사람의 이름을 조회하기
+select dept.dname, emp.ename from emp join dept
+ on emp.deptno=dept.deptno where dept.dname='sales';
+
+-- 3. 가장 많은 급여를 받는 사원의 이름과 부서명 조회하기
+-- 4. 사번, 이름, 부서명, 입사일을 조회하기
