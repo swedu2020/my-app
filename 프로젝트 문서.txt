@@ -13,6 +13,7 @@
   참고자료 : https://wikidocs.net/212037
                 https://app.diagrams.net/
                 https://online.visual-paradigm.com/ko/
+
   2-1. 구조 다이어그램
    Class Diagram
    Component Diagram
@@ -21,6 +22,7 @@
    Package Diagram
    Composite Structure Diagram
    Profile Diagram
+
   2-2. 행위 다이어그램
    Use Case Diagram
    Activity Diagram
@@ -29,6 +31,12 @@
    Communication Diagram
    Interaction Overview Diagram
    Timing Diagram
+
+  2-3. Restful API 설계서
+    HTTP URI, 메소드, 기능, 응답JSON 구조 등..
+    https://learn.microsoft.com/ko-kr/azure/architecture/best-practices/api-design
+
+
 3. DB설계 문서
    E-R 다이어그램
    인덱스 설계문서
