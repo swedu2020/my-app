@@ -1,0 +1,40 @@
+1. 기획문서
+  참고 자료 : [Do it! 웹 사이트 기획 입문] 학습 파일
+                 http://www.easyspub.co.kr/20_Menu/BookView/142/PUB
+  벤치마킹 보고서
+  프로젝트 기획서(사업계획서)
+  기능정의서
+  정책정의서
+  화면정의서
+  일정표
+  기타 등등...
+
+2. 개발문서 (UML 다이어그램)
+  참고자료 : https://wikidocs.net/212037
+                https://app.diagrams.net/
+                https://online.visual-paradigm.com/ko/
+  2-1. 구조 다이어그램
+   Class Diagram
+   Component Diagram
+   Deployment Diagram
+   Object Diagram
+   Package Diagram
+   Composite Structure Diagram
+   Profile Diagram
+  2-2. 행위 다이어그램
+   Use Case Diagram
+   Activity Diagram
+   State Machine Diagram
+   Sequence Diagram
+   Communication Diagram
+   Interaction Overview Diagram
+   Timing Diagram
+3. DB설계 문서
+   E-R 다이어그램
+   인덱스 설계문서
+   뷰 설계문서
+
+4. 일지
+   팀별 회의 일지
+   개인별 개발 일지
+   
